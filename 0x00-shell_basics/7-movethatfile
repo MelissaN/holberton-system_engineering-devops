@@ -1,2 +1,2 @@
 #!/bin/bash
-touch /tmp/betty; mv /tmp/betty /tmp/holberton/betty
+touch /tmp/betty; mkdir /tmp/holberton; mv /tmp/betty /tmp/holberton/betty
