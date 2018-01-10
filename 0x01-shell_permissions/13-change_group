@@ -1,2 +1,2 @@
-cat 13-change_group~
 #!/bin/bash
+chgrp holberton betty
