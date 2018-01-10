@@ -1,0 +1,3 @@
+#!/bin/bash
+mkdir dir_holberton -m 751
+  
