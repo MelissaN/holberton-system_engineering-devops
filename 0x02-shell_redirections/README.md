@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # Basic shell scripts re I/O redirections and filters. 
-=======
-# Basic shell scripts for I/O redirections and filters. 
->>>>>>> 9e3fc1a8acffedf9e93a10505359d5c648dd4130
 
 0- prints "Hello, World”, followed by a new line to the standard output
 
@@ -38,11 +34,7 @@
 
 16- prints lines containing the pattern “root” and 3 lines after them in the file /etc/passwd
 
-<<<<<<< HEAD
 17- prints all lines in the file /etc/passwd that do not contain the pattern “bin”
-=======
-17- prints all the lines in the file /etc/passwd that do not contain the pattern “bin”
->>>>>>> 9e3fc1a8acffedf9e93a10505359d5c648dd4130
 
 18- prints all lines of the file /etc/ssh/sshd_config starting with a letter
 
@@ -61,11 +53,3 @@
 102- decodes acrostics that use the first letter of each line
 
 103- parses web servers logs from NASA website (1995) in TSV format as input and displays the 11 hosts or IP addresses which did the most requests
-
-100- finds all empty files and directories in the current directory and all sub-directories. 
-
-101- lists all the files with a .gif extension in the current directory and all its sub-directories
-
-102- decodes acrostics that use the first letter of each line
-
-102-parses web servers logs in TSV format as input and displays the 11 hosts or IP addresses which did the most requests. Order by number of requests, most active host or IP at the top
