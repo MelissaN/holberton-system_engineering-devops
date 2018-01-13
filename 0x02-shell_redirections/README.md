@@ -1,18 +1,18 @@
-# Basic shell scripts for I/O redirections and filters. Prints:
+# Basic shell scripts for I/O redirections and filters. 
 
-0- "Hello, World”, followed by a new line to the standard output
+0- prints "Hello, World”, followed by a new line to the standard output
 
-1- confused smiley "(Ôo)'
+1- prints confused smiley "(Ôo)'
 
-2- content of the /etc/passwd file
+2- prints content of the /etc/passwd file
 
-3- the content of /etc/passwd and /etc/host
+3- prints the content of /etc/passwd and /etc/host
 
-4- last 10 lines of /etc/passwd
+4- prints last 10 lines of /etc/passwd
 
-5- first 10 lines of /etc/passwd
+5- prints first 10 lines of /etc/passwd
 
-6- the third line of the file iacta
+6- prints the third line of the file iacta
 
 7- writes into the file ls_cwd_content the result of the command ls -la
 
@@ -28,21 +28,29 @@
 
 13- takes a list of words as input and prints only words that appear exactly once
 
-14- lines containing the pattern “root” from the file /etc/passwd
+14- prints lines containing the pattern “root” from the file /etc/passwd
 
-15- number of lines that contain the pattern “bin” in the file /etc/passwd
+15- prints number of lines that contain the pattern “bin” in the file /etc/passwd
 
-16- lines containing the pattern “root” and 3 lines after them in the file /etc/passwd
+16- prints lines containing the pattern “root” and 3 lines after them in the file /etc/passwd
 
-17- all the lines in the file /etc/passwd that do not contain the pattern “bin”
+17- prints all the lines in the file /etc/passwd that do not contain the pattern “bin”
 
-18- all lines of the file /etc/ssh/sshd_config starting with a letter
+18- prints all lines of the file /etc/ssh/sshd_config starting with a letter
 
-19- replace all characters A and c from input to Z and e respectively
+19- replaces all characters A and c from input to Z and e respectively
 
 20- removes all letters c and C from input
 
-21- reverse its input
+21- reverses its input
 
-22- all users and their home directories, sorted by users
+22- prints all users and their home directories from /etc/passwd, sorted by users
+
+100- finds all empty files and directories in the current directory and all sub-directories
+
+101- lists all the files with a .gif extension in the current directory and all its sub-directories
+
+102- decodes acrostics that use the first letter of each line
+
+103- parses web servers logs from NASA website (1995) in TSV format as input and displays the 11 hosts or IP addresses which did the most requests
 
