@@ -1,4 +1,4 @@
-# Basic shell scripts for I/O redirections and filters:
+# Basic shell scripts for I/O redirections and filters. Prints:
 
 0- "Hello, World”, followed by a new line to the standard output
 
