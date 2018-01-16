@@ -1,0 +1,2 @@
+#!/bin/bash
+echo $(( behlnort#((water#$WATER + stir.#$STIR)) ))
