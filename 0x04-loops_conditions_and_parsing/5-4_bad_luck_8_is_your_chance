@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Prints "Holberton School" 10x, "bad luck" the 4th, "good luck" the 8th
+
+i=1
+while [ "$i" -le 10 ]
+do
+    if [ "$i" -eq 4 ]; then
+	echo "bad luck"
+    elif [ "$i" -eq 8 ]; then
+	echo "good luck"
+    else
+	echo "Holberton School"
+    fi
+    (( i++ ))
+done
