@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Read file and manipulate fields to generate story
+
+FILE="/etc/passwd"
+
+while IFS=":" read -r user pw uid gid uinfo homedir shell
+do
+    echo "The user $user is part of the $gid gang,
+lives in $homedir and rides shell.
+$uid's place is protected by the passcode $pw,
+more info about the user here: $uinfo"
+done < "$FILE"
