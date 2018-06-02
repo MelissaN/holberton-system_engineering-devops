@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+# Shellcheck style wants dummy _ variable if not using
+
+for _ in {1..10}
+do
+    echo "Holberton School";
+done
