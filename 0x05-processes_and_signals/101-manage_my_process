@@ -2,7 +2,7 @@
 # Start/Stops/Restarts. Script to be used with manage_my_process
 
 argv1=$1
-tmpfile="/var/run/my_process_id"
+tmpfile="/var/run/my_process.pid"
 
 startLoop_n_createFile()
 {
@@ -15,15 +15,15 @@ killLoop_n_rmFile()
     rm "$tmpfile"
 }
 case "$argv1" in
-    start) startLoop_n_createFile
-	echo "manage_my_process started"
+    start) echo "manage_my_process started"
+	startLoop_n_createFile
 	;;
-    stop) killLoop_n_rmFile
-	echo "manage_my_process stopped"
-	;;
-    restart) startLoop_n_createFile
+    stop) echo "manage_my_process stopped"
 	killLoop_n_rmFile
-	echo "manage_my_process restarted"
+	;;
+    restart) echo "manage_my_process restarted"
+	startLoop_n_createFile
+	killLoop_n_rmFile
 	;;
     *) echo "Usage: manage_my_process {start|stop|restart}"
 	;;
