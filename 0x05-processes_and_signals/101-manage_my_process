@@ -23,8 +23,8 @@ case "$argv1" in
 	killLoop_n_rmFile
 	;;
     restart) echo "manage_my_process restarted"
-	startLoop_n_createFile
 	killLoop_n_rmFile
+	startLoop_n_createFile
 	;;
     *) echo "Usage: manage_my_process {start|stop|restart}"
 	;;
