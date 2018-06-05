@@ -4,7 +4,7 @@
 
 rmfile_n_exit()
 {
-    rm -f holbertonscript.pid;
+    rm -f /var/run/holbertonscript.pid;
     exit
 }
 trap "echo 'Y U no love me?!'" SIGINT
@@ -12,7 +12,7 @@ trap "echo 'I hate the kill command'; rmfile_n_exit" SIGTERM
 trap "echo 'I hate the kill command'; rmfile_n_exit" SIGQUIT
 
 
-echo $$ >> holbertonscript.pid
+echo $$ >> /var/run/holbertonscript.pid
 while (true)
 do
     echo 'To infinity and beyond'
