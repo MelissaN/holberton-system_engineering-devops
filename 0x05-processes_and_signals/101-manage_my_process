@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# Start/Stops/Restarts. Script to be used with manage_my_process
+
+argv1=$1
+tmpfile="/var/run/my_process_id"
+
+startLoop_n_createFile()
+{
+    ./manage_my_process &
+    echo $! >> "$tmpfile"
+}
+killLoop_n_rmFile()
+{
+    kill "$(cat "$tmpfile")"
+    rm "$tmpfile"
+}
+case "$argv1" in
+    start) startLoop_n_createFile
+	echo "manage_my_process started"
+	;;
+    stop) killLoop_n_rmFile
+	echo "manage_my_process stopped"
+	;;
+    restart) startLoop_n_createFile
+	killLoop_n_rmFile
+	echo "manage_my_process restarted"
+	;;
+    *) echo "Usage: manage_my_process {start|stop|restart}"
+	;;
+esac
