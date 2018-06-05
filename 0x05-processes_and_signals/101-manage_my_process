@@ -11,7 +11,8 @@ startLoop_n_createFile()
 }
 killLoop_n_rmFile()
 {
-    kill "$(cat "$tmpfile")"
+    #kill "$(cat "$tmpfile")"
+    sudo pkill -f "./manage_my_process"
     rm "$tmpfile"
 }
 case "$argv1" in
