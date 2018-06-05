@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Script kills another script running in another terminal (need -f to find pid)
 
-kill $(pgrep -f "4-to_infinity_and_beyond")
+kill "$(pgrep -f "4-to_infinity_and_beyond")"
