@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Infinite loop creates file with pid, catches signal, and removes file/exits:
+# Ctrl-C (SIGINT), kill (SIGTERM), and ctrl-| (SIGQUIT)
+
+rmfile_n_exit()
+{
+    rm -f holbertonscript.pid;
+    exit
+}
+trap "echo 'Y U no love me?!'" SIGINT
+trap "echo 'I hate the kill command'; rmfile_n_exit" SIGTERM
+trap "echo 'I hate the kill command'; rmfile_n_exit" SIGQUIT
+
+
+echo $$ >> holbertonscript.pid
+while (true)
+do
+    echo 'To infinity and beyond'
+    sleep 2
+done
