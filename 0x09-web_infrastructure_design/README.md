@@ -8,7 +8,7 @@
 #### secured and monitored infrastructure
 ![secured and monitored infrastructure](https://i.imgur.com/75k7rlK.jpg)
 #### scalable infrastructure
-![scalable infrastructure](https://i.imgur.com/85WqcZw.jpg)
+![scalable infrastructure](https://i.imgur.com/AVOdeVZ.jpg)
 
 ---
 ### Authors
