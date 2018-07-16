@@ -1,0 +1,6 @@
+# SSH client configuration to use the private key ~/.ssh/holberton
+# SSH client configuration to refuse to authenticate using a password
+
+Host 35.229.54.225
+     PasswordAuthentication no
+     IdentityFile ~/.ssh/holberton

@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Bash script that creates a RSA key pair
+# Number of bits in the created key to be created 4096
+# Name of the created private key must be holberton
+# The created key must be protected by the passphrase betty
+
+ssh-keygen -b 4096 -f holberton -N betty
