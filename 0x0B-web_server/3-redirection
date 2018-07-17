@@ -6,7 +6,7 @@ ADD301_REDIRECT="\\\tlocation /redirect_me {\n\t\t return 301 https://google.com
 
 sudo apt-get update
 sudo apt-get -y install nginx
-sudo service nginx start
+#sudo service nginx start
 echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
 sudo sed -i "30i $ADD301_REDIRECT" /etc/nginx/sites-available/default #add at line 30
-sudo service nginx restart
+sudo service nginx start
