@@ -18,7 +18,7 @@
 * [HTTP redirection](https://moz.com/learn/seo/redirection)
 * [Not found HTTP response code](https://en.wikipedia.org/wiki/HTTP_404)
 * [Logs files on Linux](https://www.cyberciti.biz/faq/ubuntu-linux-gnome-system-log-viewer/)
-
+* Inside server --> ```/usr/share/nginx/html/```  ;  ```/etc/nginx/sites-available/default```
 ### Environment
 * Language: Bash Scripts
 * OS: Ubuntu 14.04 LTS
