@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Create infinite loop to be used to test 2-execute_a_command
+
+while true;
+      do
+      echo "Infinite loop"
+      sleep 1
+      done
