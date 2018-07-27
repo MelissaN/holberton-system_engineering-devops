@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Configure server with: Nginx, custom 404, custom 301 redirect to google
+# Add to HTTP header
+
+ADD301_REDIRECT="\\\tlocation /redirect_me {\n\t\t return 301 https://google.com;\n\t}\n"
+ADD404_NOTFOUND="error_page 404 /custom_404.html;\n\\tlocation = /custom_404.html {\n\t\t root /usr/share/nginx/html;\n\t\tinternal;\n\t}\n"
+PATTERN="#error_page 404 /404.html;"
+ADD_HEADER="\\\tadd_header X-Served-By $HOSTNAME;"
+
+sudo apt-get update
+sudo apt-get -y install nginx
+sudo service nginx start
+
+echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
+
+# melissax.online/redirect_me redirects to google.com (add to line 30)
+sudo sed -i "30i $ADD301_REDIRECT" /etc/nginx/sites-available/default
+
+# Any page that errors shows this new custom_404.html page (uncomment and replace code)
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
+sudo sed -i "s@$PATTERN@$ADD404_NOTFOUND@" /etc/nginx/sites-available/default
+
+# Header is updated (add_header to file)
+sudo sed -i "27i $ADD_HEADER" /etc/nginx/sites-available/default
+
+sudo service nginx restart
