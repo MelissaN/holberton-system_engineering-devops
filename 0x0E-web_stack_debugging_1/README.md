@@ -2,7 +2,6 @@
 
 ### Description of what each file shows:
 0. Requirement: Nginx must be running, and listening on port 80 of all the server’s active IPv4 IPs
-can't curl
 ```
 root@966c5664b21f:/# curl 0:80
 curl: (7) Failed to connect to 0 port 80: Connection refused
@@ -38,7 +37,7 @@ Commercial support is available at
 </html>
 root@966c5664b21f:/#
 ```
-1. Same as 0 except nginx does not need to be running
+1. Tweak #0 except nginx status should return not running
 ```
 root@966c5664b21f:/# service nginx status
  * nginx is not running
