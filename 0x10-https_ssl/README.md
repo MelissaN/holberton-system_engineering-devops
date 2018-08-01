@@ -4,7 +4,6 @@
 > we should place the certificate on our website web server(s). Resources:
 > [SSL](https://www.sslshopper.com/why-ssl-the-purpose-of-using-ssl-certificates.html),
 > [Step-by-Step Guide I followed to create SSL certificate!](https://www.digitalocean.com/community/tutorials/how-to-secure-haproxy-with-let-s-encrypt-on-ubuntu-14-04),
-> [Similar tutorial - used autorenewal section](https://fly.io/articles/load-balancing-https-with-lets-encrypt/),
 > [HTTP to HTTPS](https://www.instantssl.com/ssl-certificate-products/https.html),
 > [sample Bash functions taking parameters](http://tldp.org/LDP/abs/html/complexfunct.html)
 
@@ -18,7 +17,7 @@ Files that start with:
 * Language: Bash script
 * OS: Ubuntu 14.04 LTS
 * Web Servers: web-01, web-02 Nginx
-* Load Balancer: lb-01, (www.) HAproxy
+* Load Balancer: lb-01, (www) HAproxy; Important folders /etc/letsencrypt/live/www.melissax.online/*
 * Domain Name: from [Gandi](https://www.gandi.net/en)
 * Style guidelines: [Shellscript for Bash](https://github.com/koalaman/shellcheck)
 
