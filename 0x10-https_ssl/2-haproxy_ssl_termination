@@ -43,6 +43,8 @@ defaults
         option forwardfor
         option http-server-close
 
+# Setting up SSL from tutorial
+
 frontend www-http
         bind *:80
         reqadd X-Forwarded-Proto:\ http
