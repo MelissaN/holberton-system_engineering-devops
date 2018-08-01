@@ -4,14 +4,18 @@
 > we should place the certificate on our website web server(s). Resources:
 > [SSL](https://www.sslshopper.com/why-ssl-the-purpose-of-using-ssl-certificates.html),
 > [Step-by-Step Guide I followed to create SSL certificate!](https://www.digitalocean.com/community/tutorials/how-to-secure-haproxy-with-let-s-encrypt-on-ubuntu-14-04),
+> [Similar tutorial - used autorenewal section](https://fly.io/articles/load-balancing-https-with-lets-encrypt/),
 > [HTTP to HTTPS](https://www.instantssl.com/ssl-certificate-products/https.html),
 > [sample Bash functions taking parameters](http://tldp.org/LDP/abs/html/complexfunct.html)
 
 ### Description of what each file shows:
 Files that start with:
-1. running the script shows our subdomain and A records
-2. shows HAproxy config file after creating SSL certificate. HAproxy is listening to port TCP 443 and accepts SSL traffic.
-3. shows HAproxy config file again. Redirects HTTP traffic to HTTPS. HAproxy returns a 301 permanent redirect.
+1. After updating A records for www (to point to load balancer), lb-01, web-01, and web-02 on [Gandi](https://www.gandi.net/en), running this script shows our subdomain and A records
+```
+
+```
+2. After following the Step-by-Step Guide on Digital Ocean to install a certificate, this shows the most updated HAproxy config file. HAproxy is listening to port TCP 443 and accepts SSL traffic.
+3. Shows updated HAproxy config file. Redirects HTTP traffic to HTTPS. HAproxy returns a 301 permanent redirect.
 
 ### Environment
 * Language: Bash script
