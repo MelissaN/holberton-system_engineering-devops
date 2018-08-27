@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-# Request from API; Return TODO list progress given employee ID
-# Export this data to CSV
+"""
+Request from API; Return TODO list progress given employee ID
+Export this data to CSV
+"""
 from sys import argv
 import csv
 import requests
@@ -26,7 +28,7 @@ def to_csv():
                       "TASK_COMPLETED_STATUS", "TASK_TITLE"]
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         for task in TASK_STATUS_TITLE:
-            writer.writerow({"USER_ID": argv[1], "USERNAME": USERNAME,
+            writer.writerow({"USER_ID": str(argv[1]), "USERNAME": USERNAME,
                              "TASK_COMPLETED_STATUS": task[0],
                              "TASK_TITLE": task[1]})
 
