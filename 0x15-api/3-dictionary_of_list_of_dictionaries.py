@@ -28,7 +28,7 @@ def all_to_json():
         data[str(u[0])] = t
     filename = "todo_all_employees.json"
     with open(filename, "w") as f:
-        json.dump(data, f)
+        json.dump(data, f, sort_keys=True)
 
 
 if __name__ == "__main__":
