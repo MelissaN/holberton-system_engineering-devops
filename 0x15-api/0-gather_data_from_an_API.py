@@ -2,8 +2,8 @@
 """
 Request from API; Return TODO list progress given employee ID
 """
-from sys import argv
 import requests
+from sys import argv
 
 
 def display():
