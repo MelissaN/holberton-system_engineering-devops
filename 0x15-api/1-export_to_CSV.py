@@ -3,9 +3,9 @@
 Request from API; Return TODO list progress given employee ID
 Export this data to CSV
 """
-from sys import argv
 import csv
 import requests
+from sys import argv
 
 
 def to_csv():
@@ -26,9 +26,10 @@ def to_csv():
     with open(filename, "w") as csvfile:
         fieldnames = ["USER_ID", "USERNAME",
                       "TASK_COMPLETED_STATUS", "TASK_TITLE"]
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames,
+                                quoting=csv.QUOTE_ALL)
         for task in TASK_STATUS_TITLE:
-            writer.writerow({"USER_ID": str(argv[1]), "USERNAME": USERNAME,
+            writer.writerow({"USER_ID": argv[1], "USERNAME": USERNAME,
                              "TASK_COMPLETED_STATUS": task[0],
                              "TASK_TITLE": task[1]})
 
