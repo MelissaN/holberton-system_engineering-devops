@@ -7,8 +7,8 @@ import requests
 
 def top_ten(subreddit):
     """
-        return number of subscribers for a given subreddit
-        return 0 if invalid subreddit given
+        return top ten titles for a given subreddit
+        return None if invalid subreddit given
     """
     # get user agent
     # https://stackoverflow.com/questions/10606133/ -->
