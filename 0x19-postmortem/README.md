@@ -1,8 +1,6 @@
-## Postmortem
----
-![500 error](https://raw.githubusercontent.com/MelissaN/holberton-system_engineering-devops/0x19-postmortem/youtube500error.jpg)
-## Service unavailability
-### Incident report for [Site Outage](https://github.com/MelissaN/holberton-system_engineering-devops/tree/master/0x17-web_stack_debugging_3)
+<center>![500 error](https://raw.githubusercontent.com/MelissaN/holberton-system_engineering-devops/0x19-postmortem/youtube500error.jpg)</cetner>
+<center>## Service unavailability</center>
+<center>### Incident report for [Site Outage](https://github.com/MelissaN/holberton-system_engineering-devops/tree/master/0x17-web_stack_debugging_3)</center>
 
 #### Issue Summary
 On September 11th, 2018 from 9:39 AM to 9:49 AM UTC, the company's website was down for ten minutes. 100% of users experienced a 500 internal server error caused by a mispelled filename in a configuration file.
@@ -22,4 +20,4 @@ After a small sitewide update was deployed without first being tested, outage to
 After a discussion it has been decided we can prevent this in the future by:
 * Modifying configuration files for more error logging to quicken response times
 * Test before deploying on all servers no matter how small an update
-This is only a small incident so we are doing great! Thanks for your patience and your contiued confidence in us.
+This is only a small incident so we are doing great! Thanks for your patience and your continued confidence in us.
