@@ -1,1 +1,2 @@
-man grep
+#!/bin/bash
+echo $((2#$BINARY)) # where BINARY is a variable which contain a number with base 2
